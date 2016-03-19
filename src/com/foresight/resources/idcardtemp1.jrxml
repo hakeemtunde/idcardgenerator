@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="idcardtemp1" pageWidth="158" pageHeight="252" columnWidth="158" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="db8717f7-8e18-4398-9da4-3e780c51ab28">
+	<property name="ireport.zoom" value="3.1384283767210097"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="576"/>
+	<parameter name="empId" class="java.lang.String"/>
+	<parameter name="firstName" class="java.lang.String"/>
+	<parameter name="surname" class="java.lang.String"/>
+	<parameter name="otherName" class="java.lang.String"/>
+	<parameter name="rank" class="java.lang.String"/>
+	<parameter name="dateOfAppointment" class="java.lang.String"/>
+	<parameter name="state" class="java.lang.String"/>
+	<parameter name="lga" class="java.lang.String"/>
+	<parameter name="nationality" class="java.lang.String"/>
+	<parameter name="companyName" class="java.lang.String"/>
+	<parameter name="companyAddr" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.Object"/>
+	<parameter name="signature" class="java.lang.Object"/>
+	<parameter name="staffImage" class="java.lang.Object"/>
+	<parameter name="barcode" class="java.lang.Object"/>
+	<parameter name="frontBackground" class="java.lang.Object"/>
+	<parameter name="backBackground" class="java.lang.Object"/>
+	<parameter name="department" class="java.lang.String"/>
+	<parameter name="backInfo" class="java.lang.String"/>
+	<background>
+		<band height="252" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement mode="Transparent" x="0" y="0" width="158" height="252" uuid="cfc8b0f5-55ad-441b-bc8c-a2f99921d8f6"/>
+				<imageExpression><![CDATA[$P{backBackground}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="252">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="158" height="252" uuid="7b26d2ca-ee87-425a-8b06-17cc3b81a1a7"/>
+				<imageExpression><![CDATA[$P{frontBackground}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="8" y="54" width="143" height="5" uuid="3c98dbc6-1c05-45b8-a4ba-add9a1610a9d"/>
+				<textElement textAlignment="Center">
+					<font size="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyAddr}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="39" y="70" width="70" height="50" uuid="88054ceb-8bf2-49f3-9c18-19beab7495f0"/>
+				<imageExpression><![CDATA[$P{staffImage}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="10" y="130" width="138" height="8" uuid="da1dae33-8db1-4130-8a75-a1577d057739"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{empId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="165" width="138" height="8" uuid="7e27882c-e70b-469f-b5b5-a61fb8a22ca8"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rank}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="123" width="138" height="7" uuid="be036cbf-bd03-4c9c-be98-4ac8812a20f5"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Employee ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="140" width="145" height="7" uuid="b18cafff-e917-47d0-be5b-c5e34502c4aa"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="6" y="147" width="146" height="8" uuid="511c9a78-f00d-4884-950e-b927870c1758"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{firstName} + " "+ $P{surname} + " " + $P{otherName} ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="158" width="138" height="7" uuid="23d8646b-39ab-46c8-910f-b4df4f9d942a"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rank]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="242" width="100" height="7" uuid="c134d43a-93ac-4220-8512-5f422d329e7b"/>
+				<textElement textAlignment="Center">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Holder Sign]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="64" y="227" width="24" height="15" uuid="03b84fda-5986-48a1-b127-9ea6fb70a5a5"/>
+				<imageExpression><![CDATA[$P{signature}]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="65" y="10" width="32" height="30" uuid="c4645dc4-da51-4990-a896-272ee233664f"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="8" y="42" width="143" height="12" uuid="15d63ca0-6b7a-4fe0-9de9-69dcf378f525"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="175" width="138" height="7" uuid="a1ecb379-8329-48bd-9d38-fcb013218986"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Department]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="182" width="138" height="8" uuid="61258ac5-e0f9-4328-aeb9-372a08607911"/>
+				<textElement textAlignment="Center">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{department}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="252" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="10" y="153" width="138" height="50" uuid="01cf8966-8d60-4d7a-aa08-e449a86b1de8"/>
+				<imageExpression><![CDATA[$P{barcode}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="10" y="14" width="138" height="40" uuid="c1da8f5e-4b7d-4a1b-95d2-92eba0ecfbcb"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{backInfo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="88" width="143" height="12" uuid="1ac7b607-c22d-4763-9a1a-781a01c65d2c"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{companyName}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="63" y="57" width="32" height="30" uuid="fddb970b-5867-491a-a9e5-517549c740f9"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="122" width="138" height="20" uuid="3cff9b0d-9b04-4ad8-8382-2a7f02c8d3eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[if found please return to the address overleaf or the nearest Police Station.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
